@@ -1,24 +1,28 @@
 <template>
     <nav class="flex justify-between px-14 bg-white h-14">
         <RouterLink to="/">
-            <NavBarIcon />
+            <NavBarIconHome />
         </RouterLink>
         <RouterLink to="/about">
-            <NavBarIcon />
+            <NavBarIconAdd />
         </RouterLink>
         <RouterLink to="/about">
-            <NavBarIcon />
+            <NavBarIconUser />
         </RouterLink>
     </nav>
 </template>
 
 
 <script>
-import NavBarIcon from '@/components/Navbar/NavBarIcon.vue';
+import NavBarIconHome from '@/components/Navbar/NavBarIconHome.vue';
+import NavBarIconAdd from '@/components/Navbar/NavBarIconAdd.vue';
+import NavBarIconUser from '@/components/Navbar/NavBarIconUser.vue';
 
 export default {
     components: {
-        NavBarIcon,
+        NavBarIconHome,
+        NavBarIconAdd,
+        NavBarIconUser,
     },
 };
 
