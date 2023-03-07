@@ -11,8 +11,8 @@
 <script >
 import { RouterView } from 'vue-router'
 
-import BottomNav from '@/components/BottomNav.vue';
-import TopNav from '@/components/TopNav.vue';
+import BottomNav from '@/components/Navbar/BottomNav.vue';
+import TopNav from '@/components/Navbar/TopNav.vue';
 
 export default {
   components: {
