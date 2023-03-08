@@ -1,10 +1,12 @@
 
 <template>
-  <div class="relative">
-    <TopNav class="p-10 fixed top-0 left-0 right-0" />
+  <!--? Classes at Templates ?-->
+  <TopNav class="fixed top-0 left-0 right-0" />
+  <div class="container md:px-96">
+    <h1 class="text-3xl font-bold pt-20 pl-5">Coding Ressources</h1> <!--! OWN COMPONENT !-->
+    <h1 class="text-1xl pl-5">Search, Find and Rate!</h1> <!--! OWN COMPONENT !-->
+    <RouterView class="py-10 pb-20" />
   </div>
-
-  <RouterView />
   <BottomNav class="p-10 fixed bottom-0 left-0 right-0" />
 </template>
 

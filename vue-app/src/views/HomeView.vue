@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <h1 class="text-3xl p-5">This is the Home</h1>
     <div class="container">
+      <!--? Drop Shadow Tailwind Vue Bug?-->
       <Card />
       <Card />
       <Card />
@@ -13,10 +13,13 @@
 
 <script>
 import Card from '@/components/Card.vue';
+import NavBarIconAdd from '@/components/Navbar/NavBarIconAdd.vue';
+
 
 export default {
   components: {
     Card,
+    NavBarIconAdd,
   },
 };
 </script>

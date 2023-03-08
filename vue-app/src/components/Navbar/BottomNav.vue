@@ -1,14 +1,17 @@
 <template>
-    <nav class="flex justify-between px-14 bg-white h-14">
-        <RouterLink to="/">
-            <NavBarIconHome />
-        </RouterLink>
-        <RouterLink to="/about">
-            <NavBarIconAdd />
-        </RouterLink>
-        <RouterLink to="/about">
-            <NavBarIconUser />
-        </RouterLink>
+    <nav class="bg-white h-14">
+        <div class="flex justify-between px-14 md:invisible">
+            <RouterLink to="/">
+                <NavBarIconHome />
+            </RouterLink>
+            <RouterLink to="/about">
+                <NavBarIconAdd />
+            </RouterLink>
+            <RouterLink to="/about">
+                <NavBarIconUser />
+            </RouterLink>
+        </div>
+
     </nav>
 </template>
 
