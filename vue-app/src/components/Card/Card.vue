@@ -3,11 +3,10 @@
         <div class="border rounded-md bg-white m-5 ">
             <div class="p-5">
                 <CardIconComp />
-                <MainTitle /> <!-- :title="this.title" -->
+                <MainTitle />
                 <SubTitle />
                 <Paragraph />
                 <CardTagComp />
-                {{ data }}
             </div>
         </div>
 
@@ -23,15 +22,11 @@ import Paragraph from '@/components/Text/Paragraph.vue';
 import CardTagComp from '@/components/Card/CardTagComp.vue';
 
 
+
+
+
+
 export default {
-    props: {
-        cardObject: Object,
-    },
-    data: function () {
-        return {
-            data: this.cardObject,
-        }
-    },
     components: {
         CardIconComp,
         MainTitle,
@@ -39,9 +34,6 @@ export default {
         Paragraph,
         CardTagComp,
     },
-    mounted() {
-        console.log("CARD:", this.data)
-    }
 };
 
 </script>
