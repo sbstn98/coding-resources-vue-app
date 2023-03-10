@@ -4,10 +4,10 @@
             <RouterLink to="/">
                 <NavBarIconHome />
             </RouterLink>
-            <RouterLink to="/about">
+            <RouterLink to="/addnew">
                 <NavBarIconAdd />
             </RouterLink>
-            <RouterLink to="/about">
+            <RouterLink to="/user">
                 <NavBarIconUser />
             </RouterLink>
         </div>
