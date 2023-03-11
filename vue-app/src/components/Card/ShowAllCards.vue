@@ -1,17 +1,12 @@
 <template>
     <div>
         <Card v-for="item in cardList" :info="item" />
-
-        <!-- <ul>
-            <li v-for="item in cardList"> {{ item.title }}</li>
-        </ul> -->
     </div>
 </template>
 
 <script>
 
 import Card from '@/components/Card/Card.vue';
-
 
 export default {
     data: function () {
