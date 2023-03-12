@@ -18,7 +18,7 @@ export default {
         Card
     },
     async mounted() {
-        const response = await fetch("http://127.0.0.1:3002/");
+        const response = await fetch("http://localhost:3003/ressources/");
         const result = await response.json();
         this.cardList = result.results;
         console.log("FETCHED DATA", this.cardList)
