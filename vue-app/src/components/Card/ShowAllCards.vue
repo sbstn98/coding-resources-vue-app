@@ -23,6 +23,5 @@ export default {
         this.cardList = result.results;
         console.log("FETCHED DATA", this.cardList)
     }
-};
-
+}
 </script>
