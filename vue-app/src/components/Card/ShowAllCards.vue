@@ -1,5 +1,7 @@
 <template>
     <div>
+        <button @click="clickHandler">ENGLISH</button>
+
         <Card v-for="item in cardList" :info="item" />
     </div>
 </template>
@@ -22,6 +24,15 @@ export default {
         const result = await response.json();
         this.cardList = result.results;
         console.log("FETCHED DATA", this.cardList)
+    },
+    methods: {
+        async clickHandler() {
+            const response = await fetch("http://localhost:3003/ressources/english");
+            const result = await response.json();
+            this.cardList = result.results;
+            console.log("FETCHED DATA", this.cardList)
+        },
     }
+
 }
 </script>
