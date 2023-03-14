@@ -1,11 +1,13 @@
 <template>
-    <form class="flex flex-col">
+    <div class="flex flex-col">
         <InputField v-model="ressource.title" label="Title" />
         <InputField v-model="ressource.subtitle" label="Subtitle" />
         <InputField v-model="ressource.description" label="Description" />
-        <SubmitButton name="SUBMIT" />
+        <SubmitButton name="SUBMIT" @click="clickHandler" />
+
+        <!-- <button @click="clickHandler">Hello</button> -->
         {{ ressource }}
-    </form>
+    </div>
 </template>
 
 
@@ -21,7 +23,8 @@ export default {
             ressource: {
                 title: '',
                 subtitle: '',
-                description: ''
+                description: '',
+                url: 'Hello',
             }
         }
     },
@@ -29,6 +32,22 @@ export default {
         InputField,
         SubmitButton
     },
+    methods: {
+        clickHandler() {
+            console.log("LÖPPT!")
+            const body = JSON.stringify(this.ressource)
+            console.log(body)
+            fetch("http://localhost:3003/ressources", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: body
+            })
+                .then(response => response.json())
+                .then(data => console.log(data))
+        }
+    }
 };
 
 </script>
