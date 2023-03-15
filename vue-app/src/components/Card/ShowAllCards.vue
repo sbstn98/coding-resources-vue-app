@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button @click="clickHandler">ENGLISH</button>
+        <Filter @click="clickHandler" name="English" />
 
         <Card v-for="item in cardList" :info="item" />
     </div>
@@ -9,6 +9,7 @@
 <script>
 
 import Card from '@/components/Card/Card.vue';
+import Filter from '@/components/Filter/Filter.vue';
 
 export default {
     data: function () {
@@ -17,7 +18,8 @@ export default {
         }
     },
     components: {
-        Card
+        Card,
+        Filter
     },
     async mounted() {
         const response = await fetch("http://localhost:3003/ressources/");

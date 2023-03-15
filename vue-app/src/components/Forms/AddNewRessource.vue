@@ -24,7 +24,12 @@ export default {
                 title: '',
                 subtitle: '',
                 description: '',
-                url: 'Hello',
+                url: 'someurl',
+                german: 1,
+                english: 1,
+                html: 1,
+                css: 0,
+                jsc: 1
             }
         }
     },
@@ -34,9 +39,9 @@ export default {
     },
     methods: {
         clickHandler() {
-            console.log("LÖPPT!")
+            console.log("RESSOURCE", this.ressource)
             const body = JSON.stringify(this.ressource)
-            console.log(body)
+            console.log("BODY", body)
             fetch("http://localhost:3003/ressources", {
                 method: "POST",
                 headers: {
