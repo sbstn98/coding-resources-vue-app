@@ -2,7 +2,7 @@
     <div class="container">
         <div class="border rounded-md bg-white m-5 ">
             <div class="p-5">
-                <CardIconComp />
+                <CardIconComp :info="this.info" />
                 <MainTitle :title="this.info?.title" /> <!--this.info?.title  // fail fast -->
                 <SubTitle :subtitle="this.info.subtitle" />
                 <Paragraph :text="this.info.description" />

@@ -4,7 +4,7 @@
         <InputField v-model="ressource.subtitle" label="Subtitle" />
         <InputField v-model="ressource.description" label="Description" />
         <SubmitButton name="SUBMIT" @click="clickHandler" />
-        <CheckBox v-model="ressource.german" label="Deutsch" @click="CheckboxHandler" />
+        <CheckBox v-model="ressource.german" label="German" @click="CheckboxHandler" />
         <CheckBox v-model="ressource.english" label="English" @click="CheckboxHandler" />
         <CheckBox v-model="ressource.html" label="HTML" @click="CheckboxHandler" />
         <CheckBox v-model="ressource.css" label="CSS" @click="CheckboxHandler" />
