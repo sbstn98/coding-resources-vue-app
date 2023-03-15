@@ -58,7 +58,7 @@ export default {
             console.log("FETCHED DATA", this.cardList)
         },
         async clickHandlerJS() {
-            const response = await fetch("http://localhost:3003/ressources/jsc");
+            const response = await fetch("http://localhost:3003/ressources/js");
             const result = await response.json();
             this.cardList = result.results;
             console.log("FETCHED DATA", this.cardList)
