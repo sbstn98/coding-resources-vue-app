@@ -6,7 +6,7 @@
                 <MainTitle :title="this.info?.title" /> <!--this.info?.title  // fail fast -->
                 <SubTitle :subtitle="this.info.subtitle" />
                 <Paragraph :text="this.info.description" />
-                <CardTagComp />
+                <CardTagComp :language="this.info" />
             </div>
         </div>
 

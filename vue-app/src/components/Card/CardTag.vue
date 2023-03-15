@@ -1,6 +1,6 @@
 <template>
     <div class="border rounded-full my-2 max-w-fit">
-        <IconDescription class="px-3" />
+        <IconDescription :IconDescription="language" />
     </div>
 </template>
 
@@ -9,6 +9,9 @@
 import IconDescription from '@/components/Text/IconDescription.vue';
 
 export default {
+    props: {
+        language: String,
+    },
     components: {
         IconDescription,
     },
