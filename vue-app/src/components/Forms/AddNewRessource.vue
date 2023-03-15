@@ -4,9 +4,14 @@
         <InputField v-model="ressource.subtitle" label="Subtitle" />
         <InputField v-model="ressource.description" label="Description" />
         <SubmitButton name="SUBMIT" @click="clickHandler" />
-
+        <CheckBox v-model="ressource.german" label="Deutsch" @click="CheckboxHandler" />
+        <CheckBox v-model="ressource.english" label="English" @click="CheckboxHandler" />
+        <CheckBox v-model="ressource.html" label="HTML" @click="CheckboxHandler" />
+        <CheckBox v-model="ressource.css" label="CSS" @click="CheckboxHandler" />
+        <CheckBox v-model="ressource.jsc" label="JS" @click="CheckboxHandler" />
         <!-- <button @click="clickHandler">Hello</button> -->
         {{ ressource }}
+        {{ checkboxvalue }}
     </div>
 </template>
 
@@ -15,6 +20,7 @@
 
 import InputField from '@/components/Forms/InputField.vue';
 import SubmitButton from '@/components/Buttons/SubmitButton.vue';
+import CheckBox from './CheckBox.vue';
 
 
 export default {
@@ -25,17 +31,19 @@ export default {
                 subtitle: '',
                 description: '',
                 url: 'someurl',
-                german: 1,
-                english: 1,
-                html: 1,
-                css: 0,
-                jsc: 1
-            }
+                german: false,
+                english: false,
+                html: false,
+                css: false,
+                jsc: false
+            },
+            checkboxvalue: "",
         }
     },
     components: {
         InputField,
-        SubmitButton
+        SubmitButton,
+        CheckBox
     },
     methods: {
         clickHandler() {
@@ -51,6 +59,9 @@ export default {
             })
                 .then(response => response.json())
                 .then(data => console.log(data))
+        },
+        CheckboxHandler() {
+            console.log(this.german)
         }
     }
 };
