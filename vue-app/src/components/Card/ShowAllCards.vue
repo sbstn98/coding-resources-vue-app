@@ -1,5 +1,8 @@
 <template>
     <div>
+        <InputField v-model="searchTerm" />
+        {{ searchTerm }}
+        {{ ergebnis }}
         <br>
         <Filter @click="clickHandlerAll" name="All" />
         <Filter @click="clickHandlerEnglish" name="English" />
@@ -15,17 +18,34 @@
 
 import Card from '@/components/Card/Card.vue';
 import Filter from '@/components/Filter/Filter.vue';
+import InputField from '@/components/Forms/InputField.vue';
+
 
 
 export default {
     data: function () {
         return {
             cardList: [],
+            searchTerm: '',
+            ergebnis: [],
         }
     },
     components: {
         Card,
         Filter,
+        InputField,
+    },
+    watch: {
+        searchTerm() {
+            const ergebnis = this.searchTerm.toLocaleLowerCase()
+            this.cardList.forEach(card => {
+                // if (element.description.indexOf(this.searchTerm) > -1) {
+                if (card.description.includes(this.searchTerm)) {
+                    this.ergebnis.push(card.description);
+                }
+            });
+            // console.log(this.cardList)
+        }
     },
     async mounted() {
         const response = await fetch("http://localhost:3003/ressources/");
