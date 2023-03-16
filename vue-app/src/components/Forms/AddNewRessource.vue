@@ -8,15 +8,15 @@
             <div>
                 <h2>Technic:</h2>
                 <br>
-                <CheckBox v-model="ressource.html" label="HTML" @click="CheckboxHandler" />
-                <CheckBox v-model="ressource.css" label="CSS" @click="CheckboxHandler" />
-                <CheckBox v-model="ressource.jsc" label="JS" @click="CheckboxHandler" />
+                <CheckBox v-model="ressource.html" label="HTML" />
+                <CheckBox v-model="ressource.css" label="CSS" />
+                <CheckBox v-model="ressource.jsc" label="JS" />
             </div>
             <div>
                 <h2>Language:</h2>
                 <br>
-                <CheckBox v-model="ressource.german" label="German" @click="CheckboxHandler" />
-                <CheckBox v-model="ressource.english" label="English" @click="CheckboxHandler" />
+                <CheckBox v-model="ressource.german" label="German" />
+                <CheckBox v-model="ressource.english" label="English" />
             </div>
         </div>
         <!--         {{ ressource }}
@@ -52,7 +52,7 @@ export default {
     components: {
         InputField,
         SubmitButton,
-        CheckBox
+        CheckBox,
     },
     methods: {
         clickHandler() {
@@ -68,9 +68,17 @@ export default {
             })
                 .then(response => response.json())
                 .then(data => console.log(data))
-        },
-        CheckboxHandler() {
-            console.log(this.german)
+            this.ressource = {
+                title: '',
+                subtitle: '',
+                description: '',
+                url: 'someurl',
+                german: false,
+                english: false,
+                html: false,
+                css: false,
+                jsc: false
+            }
         }
     }
 };
