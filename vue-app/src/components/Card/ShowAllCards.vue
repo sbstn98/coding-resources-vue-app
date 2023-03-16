@@ -1,12 +1,12 @@
 <template>
     <div>
+        <br>
         <Filter @click="clickHandlerAll" name="All" />
         <Filter @click="clickHandlerEnglish" name="English" />
         <Filter @click="clickHandlerGerman" name="German" />
         <Filter @click="clickHandlerHTML" name="HTML" />
         <Filter @click="clickHandlerCSS" name="CSS" />
         <Filter @click="clickHandlerJS" name="JS" />
-
         <Card v-for=" item in cardList" :info="item" />
     </div>
 </template>
@@ -16,15 +16,16 @@
 import Card from '@/components/Card/Card.vue';
 import Filter from '@/components/Filter/Filter.vue';
 
+
 export default {
     data: function () {
         return {
-            cardList: []
+            cardList: [],
         }
     },
     components: {
         Card,
-        Filter
+        Filter,
     },
     async mounted() {
         const response = await fetch("http://localhost:3003/ressources/");
