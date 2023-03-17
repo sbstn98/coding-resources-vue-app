@@ -1,13 +1,30 @@
 <template>
-    <br>
-    <p> {{ this.info.title }} </p>
-    <br>
-    <p> {{ this.info.subtitle }} </p>
-    <br>
-    <p> {{ this.info.description }} </p>
+    <RouterLink to="/">
+        <button class=" flex  gap-2 mx-2 my-5 p-2 bg-white text-black rounded-md">
+            <i class="fas fa-arrow-left"></i>
+            <p class=" underline underline-offset-4">Back</p>
+        </button>
+    </RouterLink>
+    <div class="mx-5">
+        <CardIconComp :info="this.info" />
+
+        <MainTitle :title="this.info.title" />
+        <br>
+        <SubTitle :subtitle="this.info.subtitle" />
+        <br>
+        <Paragraph :text="this.info.description" />
+        <CardTagComp :language="this.info" />
+    </div>
 </template>
 
 <script>
+
+import MainTitle from '@/components/Text/MainTitle.vue';
+import SubTitle from '@/components/Text/SubTitle.vue';
+import Paragraph from '@/components/Text/Paragraph.vue';
+import CardIconComp from '@/components/Card/CardIconComp.vue';
+import CardTagComp from '@/components/Card/CardTagComp.vue';
+
 
 
 export default {
@@ -16,6 +33,13 @@ export default {
             id: 0,
             info: {},
         }
+    },
+    components: {
+        MainTitle,
+        SubTitle,
+        Paragraph,
+        CardIconComp,
+        CardTagComp
     },
     created() {
         this.id = parseInt(this.$route.params.id)
