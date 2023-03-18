@@ -7,6 +7,8 @@
         <Filter @click="clickHandlerHTML" name="HTML" />
         <Filter @click="clickHandlerCSS" name="CSS" />
         <Filter @click="clickHandlerJS" name="JS" />
+        <Filter @click="clickHandlerRating" name="Most Wanted" />
+
         <Card v-for=" item in cardList" :info="item" />
     </div>
 </template>
@@ -66,6 +68,12 @@ export default {
         },
         async clickHandlerAll() {
             const response = await fetch("http://localhost:3003/ressources/");
+            const result = await response.json();
+            this.cardList = result.results;
+            console.log("FETCHED DATA", this.cardList)
+        },
+        async clickHandlerRating() {
+            const response = await fetch("http://localhost:3003/ressources/rates");
             const result = await response.json();
             this.cardList = result.results;
             console.log("FETCHED DATA", this.cardList)

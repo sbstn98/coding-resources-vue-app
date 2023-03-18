@@ -6,11 +6,13 @@
                 <MainTitle :title="this.info?.title" /> <!--this.info?.title  // fail fast -->
                 <SubTitle :subtitle="this.info.subtitle" />
                 <Paragraph :text="this.info.description" />
-                <CardTagComp :language="this.info" />
+                <div class="flex items-center justify-between">
+                    <CardTagComp :language="this.info" />
+                    <RouterLink :to="'/details/' + this.info.id">
+                        <SubmitButton name="See Details" />
+                    </RouterLink>
+                </div>
 
-                <RouterLink :to="'/details/' + this.info.id">
-                    <SubmitButton name="See Details" />
-                </RouterLink>
 
             </div>
         </div>
