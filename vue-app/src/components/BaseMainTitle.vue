@@ -6,7 +6,11 @@
 
 export default {
     props: {
-        title: String,
+        title: {
+            type: String,
+            default: "Main Title",
+            required: true,
+        }
     }
 };
 

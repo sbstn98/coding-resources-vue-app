@@ -1,22 +1,22 @@
 <template>
     <div class="flex flex-col">
-        <InputField v-model="ressource.title" label="Title" />
-        <InputField v-model="ressource.subtitle" label="Subtitle" />
-        <InputField v-model="ressource.description" label="Description" />
-        <SubmitButton name="SUBMIT" @click="clickHandler" />
+        <BaseInputField v-model="ressource.title" label="Title" />
+        <BaseInputField v-model="ressource.subtitle" label="Subtitle" />
+        <BaseInputField v-model="ressource.description" label="Description" />
+        <BaseButton name="SUBMIT" @click="clickHandler" />
         <div class="flex gap-10">
             <div>
                 <h2>Technic:</h2>
                 <br>
-                <CheckBox v-model="ressource.html" label="HTML" />
-                <CheckBox v-model="ressource.css" label="CSS" />
-                <CheckBox v-model="ressource.jsc" label="JS" />
+                <BaseCheckBox v-model="ressource.html" label="HTML" />
+                <BaseCheckBox v-model="ressource.css" label="CSS" />
+                <BaseCheckBox v-model="ressource.jsc" label="JS" />
             </div>
             <div>
                 <h2>Language:</h2>
                 <br>
-                <CheckBox v-model="ressource.german" label="German" />
-                <CheckBox v-model="ressource.english" label="English" />
+                <BaseCheckBox v-model="ressource.german" label="German" />
+                <BaseCheckBox v-model="ressource.english" label="English" />
             </div>
         </div>
         <!--         {{ ressource }}
@@ -27,9 +27,9 @@
 
 <script>
 
-import InputField from '@/components/Forms/InputField.vue';
-import SubmitButton from '@/components/Buttons/SubmitButton.vue';
-import CheckBox from './CheckBox.vue';
+import BaseInputField from '@/components/BaseInputField.vue';
+import BaseButton from '@/components/BaseButton.vue';
+import BaseCheckBox from '@/components/BaseCheckBox.vue';
 
 
 export default {
@@ -50,9 +50,9 @@ export default {
         }
     },
     components: {
-        InputField,
-        SubmitButton,
-        CheckBox,
+        BaseInputField,
+        BaseButton,
+        BaseCheckBox,
     },
     methods: {
         clickHandler() {

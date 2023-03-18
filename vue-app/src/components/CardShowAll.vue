@@ -1,22 +1,22 @@
 <template>
     <div>
         <br>
-        <Filter @click="clickHandlerAll" name="All" />
-        <Filter @click="clickHandlerEnglish" name="English" />
-        <Filter @click="clickHandlerGerman" name="German" />
-        <Filter @click="clickHandlerHTML" name="HTML" />
-        <Filter @click="clickHandlerCSS" name="CSS" />
-        <Filter @click="clickHandlerJS" name="JS" />
-        <Filter @click="clickHandlerRating" name="Most Wanted" />
+        <BaseFilter @click="clickHandlerAll" name="All" />
+        <BaseFilter @click="clickHandlerEnglish" name="English" />
+        <BaseFilter @click="clickHandlerGerman" name="German" />
+        <BaseFilter @click="clickHandlerHTML" name="HTML" />
+        <BaseFilter @click="clickHandlerCSS" name="CSS" />
+        <BaseFilter @click="clickHandlerJS" name="JS" />
+        <BaseFilter @click="clickHandlerRating" name="Most Wanted" />
 
-        <Card v-for=" item in cardList" :info="item" />
+        <Card v-for=" item in cardList" :key="item.id" :ResourceInfo="item" />
     </div>
 </template>
 
 <script>
 
-import Card from '@/components/Card/Card.vue';
-import Filter from '@/components/Filter/Filter.vue';
+import Card from '@/components/Card.vue';
+import BaseFilter from '@/components/BaseFilter.vue';
 
 
 export default {
@@ -27,7 +27,7 @@ export default {
     },
     components: {
         Card,
-        Filter,
+        BaseFilter,
     },
     async mounted() {
         const response = await fetch("http://localhost:3003/ressources/");

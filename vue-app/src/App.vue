@@ -1,25 +1,25 @@
 
 <template>
   <!--? Classes at Templates ?-->
-  <TopNav class="fixed top-0 left-0 right-0" />
+  <NavBarTop class="fixed top-0 left-0 right-0" />
   <div class="container md:px-96">
     <h1 class="text-3xl font-bold pt-20 pl-5">Coding Ressources</h1> <!--! OWN COMPONENT !-->
     <h1 class="text-1xl pl-5">Search, Find and Rate!</h1> <!--! OWN COMPONENT !-->
     <RouterView class="py-10 pb-20" />
   </div>
-  <BottomNav class="p-10 fixed bottom-0 left-0 right-0" />
+  <NavBarBottom class="p-10 fixed bottom-0 left-0 right-0" />
 </template>
 
 <script >
 import { RouterView } from 'vue-router'
 
-import BottomNav from '@/components/Navbar/BottomNav.vue';
-import TopNav from '@/components/Navbar/TopNav.vue';
+import NavBarBottom from '@/components/NavBarBottom.vue';
+import NavBarTop from '@/components/NavBarTop.vue';
 
 export default {
   components: {
-    BottomNav,
-    TopNav,
+    NavBarBottom,
+    NavBarTop,
   },
 };
 

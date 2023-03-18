@@ -8,14 +8,17 @@
 
 <script>
 
-import CardIconHTML from '@/components/Card/CardIconHTML.vue';
-import CardIconCSS from '@/components/Card/CardIconCSS.vue';
-import CardIconJS from '@/components/Card/CardIconJS.vue';
+import CardIconHTML from '@/components/CardIconHTML.vue';
+import CardIconCSS from '@/components/CardIconCSS.vue';
+import CardIconJS from '@/components/CardIconJS.vue';
 
 
 export default {
     props: {
-        info: Object
+        info: {
+            type: Object,
+            required: true
+        }
     },
     components: {
         CardIconHTML,

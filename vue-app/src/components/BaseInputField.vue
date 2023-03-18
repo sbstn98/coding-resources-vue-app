@@ -12,6 +12,8 @@ export default {
         label: String,
         modelValue: {
             type: [String, Number],
+            required: true,
+
         }
     }
 };

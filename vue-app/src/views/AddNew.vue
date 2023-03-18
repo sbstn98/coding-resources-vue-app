@@ -2,17 +2,17 @@
   <!--TODO: INPUTS & BUTTONS IN OWN COMPONENT-->
   <div class="container p-5">
     <h1 class="text-3xl">Add a New Ressource</h1>
-    <AddNewRessource />
+    <FormAddNewRessource />
   </div>
 </template>
 
 <script>
 
-import AddNewRessource from '@/components/Forms/AddNewRessource.vue';
+import FormAddNewRessource from '@/components/FormAddNewRessource.vue';
 
 export default {
   components: {
-    AddNewRessource
+    FormAddNewRessource
   },
 };
 

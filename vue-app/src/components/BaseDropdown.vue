@@ -24,6 +24,8 @@ export default {
         label: String,
         modelValue: {
             type: String,
+            required: true,
+
         }
     },
     emits: ['update:modelValue']

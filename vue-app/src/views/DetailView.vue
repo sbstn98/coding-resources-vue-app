@@ -1,33 +1,32 @@
 <template>
     <RouterLink to="/">
-        <button class=" flex  gap-2 mx-2 my-5 p-2 bg-white text-black rounded-md">
-            <i class="fas fa-arrow-left"></i>
-            <p class=" underline underline-offset-4">Back</p>
-        </button>
+        <BaseButtonBack />
     </RouterLink>
     <div class="mx-5">
         <CardIconComp :info="this.info" />
-        <MainTitle :title="this.info.title" />
+        <BaseMainTitle :title="this.info.title" />
         <br>
-        <SubTitle :subtitle="this.info.subtitle" />
+        <BaseSubTitle :subtitle="this.info.subtitle" />
         <br>
-        <Paragraph :text="this.info.description" />
+        <BaseParagraph :text="this.info.description" />
         <CardTagComp :language="this.info" />
         <br>
-        <Dropdown v-model="this.rating" :label="this.label" />
-        <SubmitButton name="SUBMIT" @click="clickHandler" />
+        <BaseDropdown v-model="this.rating" :label="this.label" />
+        <BaseButton name="SUBMIT" @click="clickHandler" />
     </div>
 </template>
 
 <script>
 
-import MainTitle from '@/components/Text/MainTitle.vue';
-import SubTitle from '@/components/Text/SubTitle.vue';
-import Paragraph from '@/components/Text/Paragraph.vue';
-import CardIconComp from '@/components/Card/CardIconComp.vue';
-import CardTagComp from '@/components/Card/CardTagComp.vue';
-import Dropdown from '@/components/Forms/Dropdown.vue';
-import SubmitButton from '@/components/Buttons/SubmitButton.vue';
+import BaseMainTitle from '@/components/BaseMainTitle.vue';
+import BaseSubTitle from '@/components/BaseSubTitle.vue';
+import BaseParagraph from '@/components/BaseParagraph.vue';
+import CardIconComp from '@/components/CardIconComp.vue';
+import CardTagComp from '@/components/CardTagComp.vue';
+import BaseDropdown from '@/components/BaseDropdown.vue';
+import BaseButton from '@/components/BaseButton.vue';
+import BaseButtonBack from '@/components/BaseButtonBack.vue';
+
 
 
 
@@ -36,7 +35,7 @@ export default {
         return {
             id: 0,
             info: {},
-            label: "Rating:",
+            label: "Rate the resource here:",
             rating: 0,
             body: {
                 id: 0,
@@ -45,13 +44,14 @@ export default {
         }
     },
     components: {
-        MainTitle,
-        SubTitle,
-        Paragraph,
+        BaseMainTitle,
+        BaseSubTitle,
+        BaseParagraph,
         CardIconComp,
         CardTagComp,
-        Dropdown,
-        SubmitButton
+        BaseDropdown,
+        BaseButton,
+        BaseButtonBack
     },
     created() {
         this.id = parseInt(this.$route.params.id)

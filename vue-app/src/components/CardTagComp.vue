@@ -8,7 +8,7 @@
 
 <script>
 
-import CardTag from '@/components/Card/CardTag.vue';
+import CardTag from '@/components/CardTag.vue';
 
 export default {
     data: function () {
@@ -18,7 +18,10 @@ export default {
         }
     },
     props: {
-        language: Object,
+        language: {
+            type: Object,
+            default: "Esperanto"
+        }
     },
     components: {
         CardTag

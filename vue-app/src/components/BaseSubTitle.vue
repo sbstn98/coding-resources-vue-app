@@ -6,7 +6,11 @@
 
 export default {
     props: {
-        subtitle: String,
+        subtitle: {
+            type: String,
+            default: "A Sub Title",
+            required: true
+        }
     }
 };
 

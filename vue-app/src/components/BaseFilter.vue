@@ -11,7 +11,11 @@
 export default {
     inheritAttrs: false,
     props: {
-        name: String,
+        name: {
+            type: String,
+            default: "Filter",
+            required: true
+        }
     },
     emits: ['click']
 };

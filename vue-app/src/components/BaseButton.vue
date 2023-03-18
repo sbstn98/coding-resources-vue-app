@@ -9,7 +9,11 @@
 export default {
     inheritAttrs: false,
     props: {
-        name: String,
+        name: {
+            type: String,
+            default: "Button",
+            required: true
+        }
     },
     emits: ['click']
 };

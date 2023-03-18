@@ -17,9 +17,9 @@
 
 
 <script>
-import NavBarIconHome from '@/components/Navbar/NavBarIconHome.vue';
-import NavBarIconAdd from '@/components/Navbar/NavBarIconAdd.vue';
-import NavBarIconUser from '@/components/Navbar/NavBarIconUser.vue';
+import NavBarIconHome from '@/components/NavBarIconHome.vue';
+import NavBarIconAdd from '@/components/NavBarIconAdd.vue';
+import NavBarIconUser from '@/components/NavBarIconUser.vue';
 
 export default {
     components: {

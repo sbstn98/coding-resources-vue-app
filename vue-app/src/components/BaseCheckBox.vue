@@ -17,6 +17,8 @@ export default {
         label: String,
         modelValue: {
             type: Boolean,
+            default: false,
+            required: true
         }
     },
     emits: ['update:modelValue']

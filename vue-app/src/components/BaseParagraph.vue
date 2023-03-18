@@ -7,7 +7,11 @@
 
 export default {
     props: {
-        text: String,
+        text: {
+            type: String,
+            default: "A Paragraph",
+            required: true
+        }
     }
 };
 

@@ -6,7 +6,11 @@
 <script>
 export default {
     props: {
-        IconDescription: String,
+        IconDescription: {
+            type: String,
+            default: "IconDescription",
+            required: true,
+        }
     }
 };
 </script>
