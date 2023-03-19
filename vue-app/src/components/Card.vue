@@ -1,12 +1,12 @@
 <template>
     <div class="container">
         <div class="border rounded-md bg-white m-5 ">
-            <div class="p-5">
+            <div class="p-4">
                 <CardIconComp :info="this.ResourceInfo" />
-                <BaseMainTitle :title="this.ResourceInfo?.title" /> <!--this.info?.title  // fail fast -->
-                <BaseSubTitle :subtitle="this.ResourceInfo.subtitle" />
-                <BaseParagraph :text="this.ResourceInfo.description" />
-                <div class="flex items-center justify-between">
+                <BaseMainTitle class="pt-4" :title="this.ResourceInfo?.title" /> <!--this.info?.title  // fail fast -->
+                <BaseSubTitle class="pt-4" :subtitle="this.ResourceInfo.subtitle" />
+                <BaseParagraph class="pt-8" :text="this.ResourceInfo.description" />
+                <div class="pt-4 flex items-center justify-between">
                     <CardTagComp :language="this.ResourceInfo" />
                     <RouterLink :to="{
                         name: 'details', params: { id: this.ResourceInfo.id }

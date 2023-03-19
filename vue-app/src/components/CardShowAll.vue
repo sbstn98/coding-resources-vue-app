@@ -1,7 +1,7 @@
 <template>
     <div>
         <br>
-        <div class="flex flex-wrap gap p-3">
+        <div class="flex flex-wrap gap-2 p-4">
             <BaseFilter @click="clickHandlerAll" name="All" />
             <BaseFilter @click="clickHandlerEnglish" name="English" />
             <BaseFilter @click="clickHandlerGerman" name="German" />

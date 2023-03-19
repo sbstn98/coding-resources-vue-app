@@ -3,7 +3,7 @@
     <!--? Drop Shadow Tailwind Vue Bug?-->
     <div class="p-5">
       <BaseMainTitle :title="this.title" />
-      <BaseSubTitle :subtitle="this.subtitle" />
+      <BaseSubTitle class="pt-4" :subtitle="this.subtitle" />
     </div>
     <CardShowAll />
 

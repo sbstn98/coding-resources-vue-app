@@ -1,5 +1,5 @@
 <template>
-    <div class="flex gap-5 py-3">
+    <div class="flex gap-5">
         <CardIconHTML v-if="this.info.html === 1" />
         <CardIconCSS v-if="this.info.css === 1" />
         <CardIconJS v-if="this.info.jsc === 1" />
