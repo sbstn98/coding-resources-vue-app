@@ -8,7 +8,9 @@
                 <BaseParagraph :text="this.ResourceInfo.description" />
                 <div class="flex items-center justify-between">
                     <CardTagComp :language="this.ResourceInfo" />
-                    <RouterLink :to="'/details/' + this.ResourceInfo.id">
+                    <RouterLink :to="{
+                        name: 'details', params: { id: this.ResourceInfo.id }
+                    }">
                         <BaseButtonSeeMore />
                     </RouterLink>
                 </div>

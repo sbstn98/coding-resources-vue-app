@@ -68,7 +68,7 @@ export default {
             console.log("RESSOURCE", this.ressource)
             const body = JSON.stringify(this.ressource)
             console.log("BODY", body)
-            fetch("http://localhost:3003/ressources", {
+            fetch("http://localhost:3004/ressources", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'

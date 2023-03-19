@@ -31,50 +31,50 @@ export default {
         BaseFilter,
     },
     async mounted() {
-        const response = await fetch("http://localhost:3003/ressources/");
+        const response = await fetch("http://localhost:3004/ressources/");
         const result = await response.json();
         this.cardList = result.results;
         console.log("FETCHED DATA", this.cardList)
     },
     methods: {
         async clickHandlerEnglish() {
-            const response = await fetch("http://localhost:3003/ressources/english");
+            const response = await fetch("http://localhost:3004/ressources/english");
             const result = await response.json();
             this.cardList = result.results;
             console.log("FETCHED DATA", this.cardList)
         },
         async clickHandlerGerman() {
-            const response = await fetch("http://localhost:3003/ressources/german");
+            const response = await fetch("http://localhost:3004/ressources/german");
             const result = await response.json();
             this.cardList = result.results;
             console.log("FETCHED DATA", this.cardList)
         },
         async clickHandlerHTML() {
-            const response = await fetch("http://localhost:3003/ressources/html");
+            const response = await fetch("http://localhost:3004/ressources/html");
             const result = await response.json();
             this.cardList = result.results;
             console.log("FETCHED DATA", this.cardList)
         },
         async clickHandlerCSS() {
-            const response = await fetch("http://localhost:3003/ressources/css");
+            const response = await fetch("http://localhost:3004/ressources/css");
             const result = await response.json();
             this.cardList = result.results;
             console.log("FETCHED DATA", this.cardList)
         },
         async clickHandlerJS() {
-            const response = await fetch("http://localhost:3003/ressources/js");
+            const response = await fetch("http://localhost:3004/ressources/js");
             const result = await response.json();
             this.cardList = result.results;
             console.log("FETCHED DATA", this.cardList)
         },
         async clickHandlerAll() {
-            const response = await fetch("http://localhost:3003/ressources/");
+            const response = await fetch("http://localhost:3004/ressources/");
             const result = await response.json();
             this.cardList = result.results;
             console.log("FETCHED DATA", this.cardList)
         },
         async clickHandlerRating() {
-            const response = await fetch("http://localhost:3003/ressources/rates");
+            const response = await fetch("http://localhost:3004/ressources/rates");
             const result = await response.json();
             this.cardList = result.results;
             console.log("FETCHED DATA", this.cardList)

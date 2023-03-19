@@ -3,27 +3,25 @@
     <nav>
 
         <div class="bg-white flex h-14 px-5 justify-between p-4 md:hidden"> <!--TODO ALIGN ITEMS-->
-            <div>
-                <RouterLink to="/user">
-                    <i class="fas fa-user"></i>
-                </RouterLink>
-            </div>
-            <div>
-                <i class="fas fa-bars"></i>
+
+            <div class="flex gap-3 items-center">
+                <i class="fas fa-code"></i>
+                <h2>Coding Resources</h2>
             </div>
         </div>
         <div class="bg-white flex justify-between h-14 py-4 px-24 hidden md:flex"> <!--TODO ALIGN ITEMS-->
-            <div>
-                Logo
+            <div class="flex gap-3 items-center">
+                <i class="fas fa-code"></i>
+                <h2>Coding Resources</h2>
             </div>
             <div class="flex gap-2"> <!--TODO ALIGN ITEMS-->
-                <RouterLink to="/">
+                <RouterLink :to="{ name: 'home' }">
                     Home
                 </RouterLink>
-                <RouterLink to="/addnew">
+                <RouterLink :to="{ name: 'addnew' }">
                     Add
                 </RouterLink>
-                <RouterLink to="/user">
+                <RouterLink :to="{ name: 'user' }">
                     User
                 </RouterLink>
             </div>
