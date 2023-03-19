@@ -1,14 +1,15 @@
 <template>
     <div>
         <br>
-        <BaseFilter @click="clickHandlerAll" name="All" />
-        <BaseFilter @click="clickHandlerEnglish" name="English" />
-        <BaseFilter @click="clickHandlerGerman" name="German" />
-        <BaseFilter @click="clickHandlerHTML" name="HTML" />
-        <BaseFilter @click="clickHandlerCSS" name="CSS" />
-        <BaseFilter @click="clickHandlerJS" name="JS" />
-        <BaseFilter @click="clickHandlerRating" name="Most Wanted" />
-
+        <div class="flex flex-wrap gap p-3">
+            <BaseFilter @click="clickHandlerAll" name="All" />
+            <BaseFilter @click="clickHandlerEnglish" name="English" />
+            <BaseFilter @click="clickHandlerGerman" name="German" />
+            <BaseFilter @click="clickHandlerHTML" name="HTML" />
+            <BaseFilter @click="clickHandlerCSS" name="CSS" />
+            <BaseFilter @click="clickHandlerJS" name="JS" />
+            <BaseFilter @click="clickHandlerRating" name="Most Wanted" />
+        </div>
         <Card v-for=" item in cardList" :key="item.id" :ResourceInfo="item" />
     </div>
 </template>

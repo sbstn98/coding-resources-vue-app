@@ -1,7 +1,7 @@
 <template>
     <div class="flex items-center">
         <input @click="$emit('update:modelValue', $event.target.checked)" v-on="$attrs"
-            class="appearance-none m-2 p-3 border-solid border border-slate-500 checked:bg-blue-500 rounded-md"
+            class="appearance-none m-2 p-3 border-solid border border-slate-500  rounded-md checked:bg-[url('https://upload.wikimedia.org/wikipedia/commons/7/70/Checkmark_Symbol.svg')]"
             type="checkbox" id="checkbox" name="checkbox">
         <label for="checkbox">{{ label }}</label>
 
@@ -25,3 +25,4 @@ export default {
 };
 
 </script>
+

@@ -1,18 +1,5 @@
 <template>
-    <nav class="bg-white h-14">
-        <div class="flex justify-between px-14 md:invisible">
-            <RouterLink to="/">
-                <NavBarIconHome />
-            </RouterLink>
-            <RouterLink to="/addnew">
-                <NavBarIconAdd />
-            </RouterLink>
-            <RouterLink to="/user">
-                <NavBarIconUser />
-            </RouterLink>
-        </div>
-
-    </nav>
+    <NavBarIconComp />
 </template>
 
 
@@ -20,12 +7,15 @@
 import NavBarIconHome from '@/components/NavBarIconHome.vue';
 import NavBarIconAdd from '@/components/NavBarIconAdd.vue';
 import NavBarIconUser from '@/components/NavBarIconUser.vue';
+import NavBarIconComp from '@/components/NavBarIconComp.vue';
+
 
 export default {
     components: {
         NavBarIconHome,
         NavBarIconAdd,
         NavBarIconUser,
+        NavBarIconComp
     },
 };
 

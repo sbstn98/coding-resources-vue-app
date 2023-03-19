@@ -3,22 +3,30 @@
         <BaseInputField v-model="ressource.title" label="Title" />
         <BaseInputField v-model="ressource.subtitle" label="Subtitle" />
         <BaseInputField v-model="ressource.description" label="Description" />
-        <BaseButton name="SUBMIT" @click="clickHandler" />
-        <div class="flex gap-10">
-            <div>
-                <h2>Technic:</h2>
-                <br>
-                <BaseCheckBox v-model="ressource.html" label="HTML" />
-                <BaseCheckBox v-model="ressource.css" label="CSS" />
-                <BaseCheckBox v-model="ressource.jsc" label="JS" />
+        <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-2">
+                <div>
+                    <h2>Technic:</h2>
+                </div>
+                <div class="flex">
+                    <BaseCheckBox v-model="ressource.html" label="HTML" />
+                    <BaseCheckBox v-model="ressource.css" label="CSS" />
+                    <BaseCheckBox v-model="ressource.jsc" label="JS" />
+
+                </div>
             </div>
-            <div>
-                <h2>Language:</h2>
-                <br>
-                <BaseCheckBox v-model="ressource.german" label="German" />
-                <BaseCheckBox v-model="ressource.english" label="English" />
+            <div class="flex flex-col gap-2">
+                <div>
+                    <h2>Language:</h2>
+                </div>
+                <div class="flex">
+                    <BaseCheckBox v-model="ressource.german" label="German" />
+                    <BaseCheckBox v-model="ressource.english" label="English" />
+                </div>
             </div>
         </div>
+        <BaseButton name="SUBMIT" @click="clickHandler" />
+
         <!--         {{ ressource }}
         {{ checkboxvalue }} -->
     </div>
@@ -30,6 +38,7 @@
 import BaseInputField from '@/components/BaseInputField.vue';
 import BaseButton from '@/components/BaseButton.vue';
 import BaseCheckBox from '@/components/BaseCheckBox.vue';
+
 
 
 export default {

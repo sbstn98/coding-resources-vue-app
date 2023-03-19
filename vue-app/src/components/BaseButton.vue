@@ -1,5 +1,5 @@
 <template>
-    <button @click="$emit('click', $event)" v-on="$attrs" class="mx-2 my-5 p-2 bg-slate-900 text-white rounded-md">{{ name
+    <button @click="$emit('click', $event)" v-on="$attrs" class="my-3 p-2 bg-slate-900 text-white rounded-md">{{ name
     }}</button>
 </template>
 

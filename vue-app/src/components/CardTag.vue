@@ -1,5 +1,5 @@
 <template>
-    <div class="border rounded-full my-2 max-w-fit">
+    <div class="border rounded-md my-2  max-w-fit">
         <BaseIconDescription :IconDescription="language" />
     </div>
 </template>
