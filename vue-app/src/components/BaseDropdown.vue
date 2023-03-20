@@ -3,8 +3,7 @@
         <label for="select">{{ label }}</label>
 
         <select class="my-3 p-1 border-solid border border-slate-500 bg-white rounded-md"
-            @change="$emit('update:modelValue', $event.target.value)" v-on="$attrs" type="select" id="dropdown"
-            name="select">
+            @change="$emit('update:modelValue', $event.target.value)" v-on="$attrs" id="dropdown" name="select">
             <option value="0" selected>Select</option>
             <option value="1">1</option>
             <option value="2">2</option>

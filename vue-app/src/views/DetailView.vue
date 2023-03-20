@@ -36,7 +36,7 @@ export default {
             id: 0,
             info: {},
             label: "Rate the resource here:",
-            rating: 0,
+            rating: "0",
             body: {
                 id: 0,
                 rating: 1,
@@ -73,7 +73,7 @@ export default {
             }
             const body = JSON.stringify(this.body)
             console.log(this.body)
-            fetch("http://localhost:3003/ressources", {
+            fetch("http://localhost:3004/ressources", {
                 method: "PUT",
                 headers: {
                     'Content-Type': 'application/json'

@@ -6,10 +6,13 @@
   <!-- <div class="p-5">
       <BaseMainTitle :title="this.title" />
       <BaseSubTitle :subtitle="this.subtitle" />
-                                                                  </div> -->
-    <transition name="fade">
-      <RouterView class="pb-24" />
-    </transition>
+                                                                        </div> -->
+    <!-- <transition name="fade"> --> <!--! CAN NOT LONGER USED IN TRANSITION USE SLOTS-->
+    <div class="pb-24">
+      <RouterView />
+
+    </div>
+    <!-- </transition> -->
   </div>
   <NavBarBottom class="p-10 fixed bottom-0 left-0 right-0" />
 </template>
