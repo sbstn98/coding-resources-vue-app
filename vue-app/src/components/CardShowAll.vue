@@ -24,6 +24,11 @@ export default {
     data: function () {
         return {
             cardList: [],
+            query: {
+                language: 'english',
+                technic: 'html'
+            },
+            query2: 'Hello'
         }
     },
     components: {
@@ -37,24 +42,31 @@ export default {
         console.log("FETCHED DATA", this.cardList)
     },
     methods: {
-        async clickHandlerEnglish() {
-            const response = await fetch("http://localhost:3004/ressources/english");
-            const result = await response.json();
-            this.cardList = result.results;
-            console.log("FETCHED DATA", this.cardList)
+        clickHandlerEnglish() {
+            this.$router.push({ name: 'home', query: { language: 'english', technic: 'html' } })
         },
+        /*         async clickHandlerEnglish() {
+                    const response = await fetch("http://localhost:3004/ressources/english");
+                    const result = await response.json();
+                    this.cardList = result.results;
+                    console.log("FETCHED DATA", this.cardList)
+                }, */
         async clickHandlerGerman() {
             const response = await fetch("http://localhost:3004/ressources/german");
             const result = await response.json();
             this.cardList = result.results;
             console.log("FETCHED DATA", this.cardList)
         },
-        async clickHandlerHTML() {
-            const response = await fetch("http://localhost:3004/ressources/html");
-            const result = await response.json();
-            this.cardList = result.results;
-            console.log("FETCHED DATA", this.cardList)
+        clickHandlerHTML() {
+            this.$router.push({ name: 'home', query: { language: 'english', technic: 'html' } })
+
         },
+        /*         async clickHandlerHTML() {
+                    const response = await fetch("http://localhost:3004/ressources/html");
+                    const result = await response.json();
+                    this.cardList = result.results;
+                    console.log("FETCHED DATA", this.cardList)
+                }, */
         async clickHandlerCSS() {
             const response = await fetch("http://localhost:3004/ressources/css");
             const result = await response.json();
