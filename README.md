@@ -1,5 +1,5 @@
 # coding-ressources-vue-app
-Final Project for Hamburg Coding School
+Final Project for the Hamburg Coding School
 
 Coding Resources - A VUE.js Application in that student of the Hamburg Coding School can filter and rate learning resources for Web-Development.  The vision of the project is to provide students with a more effective and successful learning experience. 
 
