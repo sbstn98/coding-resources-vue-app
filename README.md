@@ -25,3 +25,5 @@ Technic used:
 - MySQL
 - Tailwind CSS
 - Atomic Design
+
+Backend: https://github.com/sbstn98/coding-resources-rest-api
