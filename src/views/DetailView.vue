@@ -73,7 +73,7 @@ export default {
             }
             const body = JSON.stringify(this.body)
             console.log(this.body)
-            fetch("https://coding-resources-rest-api.onrender.com/ressources", {
+            fetch("https://coding-resources-rest-api.onrender.com/ressources/", {
                 method: "PUT",
                 headers: {
                     'Content-Type': 'application/json'
