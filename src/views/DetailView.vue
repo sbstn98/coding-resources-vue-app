@@ -57,7 +57,7 @@ export default {
         this.id = parseInt(this.$route.params.id)
     },
     async mounted() {
-        const response = await fetch(`http://localhost:3004/ressources/ ${this.id}`);
+        const response = await fetch(`https://coding-resources-rest-api.onrender.com/ressources ${this.id}`);
         const result = await response.json();
         console.log(result)
         this.info = result.results[0];
@@ -73,7 +73,7 @@ export default {
             }
             const body = JSON.stringify(this.body)
             console.log(this.body)
-            fetch("http://localhost:3004/ressources", {
+            fetch("https://coding-resources-rest-api.onrender.com/ressources", {
                 method: "PUT",
                 headers: {
                     'Content-Type': 'application/json'
