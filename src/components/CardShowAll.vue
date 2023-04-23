@@ -36,7 +36,7 @@ export default {
         BaseFilter,
     },
     async mounted() {
-        const response = await fetch("http://localhost:3004/ressources/");
+        const response = await fetch("https://coding-resources-rest-api.onrender.com/ressources");
         const result = await response.json();
         this.cardList = result.results;
         console.log("FETCHED DATA", this.cardList)
@@ -45,14 +45,8 @@ export default {
         clickHandlerEnglish() {
             this.$router.push({ name: 'home', query: { language: 'english', technic: 'html' } })
         },
-        /*         async clickHandlerEnglish() {
-                    const response = await fetch("http://localhost:3004/ressources/english");
-                    const result = await response.json();
-                    this.cardList = result.results;
-                    console.log("FETCHED DATA", this.cardList)
-                }, */
         async clickHandlerGerman() {
-            const response = await fetch("http://localhost:3004/ressources/german");
+            const response = await fetch("https://coding-resources-rest-api.onrender.com/ressources/german");
             const result = await response.json();
             this.cardList = result.results;
             console.log("FETCHED DATA", this.cardList)
@@ -61,32 +55,26 @@ export default {
             this.$router.push({ name: 'home', query: { language: 'english', technic: 'html' } })
 
         },
-        /*         async clickHandlerHTML() {
-                    const response = await fetch("http://localhost:3004/ressources/html");
-                    const result = await response.json();
-                    this.cardList = result.results;
-                    console.log("FETCHED DATA", this.cardList)
-                }, */
         async clickHandlerCSS() {
-            const response = await fetch("http://localhost:3004/ressources/css");
+            const response = await fetch("https://coding-resources-rest-api.onrender.com/ressources/css");
             const result = await response.json();
             this.cardList = result.results;
             console.log("FETCHED DATA", this.cardList)
         },
         async clickHandlerJS() {
-            const response = await fetch("http://localhost:3004/ressources/js");
+            const response = await fetch("https://coding-resources-rest-api.onrender.com/ressources/js");
             const result = await response.json();
             this.cardList = result.results;
             console.log("FETCHED DATA", this.cardList)
         },
         async clickHandlerAll() {
-            const response = await fetch("http://localhost:3004/ressources/");
+            const response = await fetch("https://coding-resources-rest-api.onrender.com/ressources");
             const result = await response.json();
             this.cardList = result.results;
             console.log("FETCHED DATA", this.cardList)
         },
         async clickHandlerRating() {
-            const response = await fetch("http://localhost:3004/ressources/rates");
+            const response = await fetch("https://coding-resources-rest-api.onrender.com/ressources/rates");
             const result = await response.json();
             this.cardList = result.results;
             console.log("FETCHED DATA", this.cardList)
