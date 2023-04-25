@@ -1,6 +1,8 @@
 # coding-ressources-vue-app
 Final Project for the Hamburg Coding School
 
+[https://github.com/sbstn98/images/blob/master/mockup.png]
+
 Coding Resources - A VUE.js Application in that student of the Hamburg Coding School can filter and rate learning resources for Web-Development. The vision of the project is to provide students with a more effective and successful learning experience. 
 
 The project is implemented in the front end with VUE.js and Tailwind CSS. The data is stored in a MySQL database and provided through a REST API built by myself. 
