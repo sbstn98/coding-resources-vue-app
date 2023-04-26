@@ -57,7 +57,7 @@ export default {
         this.id = parseInt(this.$route.params.id)
     },
     async mounted() {
-        const response = await fetch(`http://localhost:3004/ressources/ ${this.id}`);
+        const response = await fetch(`http://localhost:3004/ressources/${this.id}`);
         const result = await response.json();
         console.log(result)
         this.info = result.results[0];
