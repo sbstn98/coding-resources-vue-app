@@ -43,7 +43,7 @@ export default {
     },
     methods: {
         async clickHandlerEnglish() {
-            const response = await fetch("https://coding-resources-rest-api.onrender.com/ressources/german");
+            const response = await fetch("https://coding-resources-rest-api.onrender.com/ressources/english");
             const result = await response.json();
             this.cardList = result.results;
             console.log("FETCHED DATA", this.cardList)
