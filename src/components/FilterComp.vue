@@ -5,7 +5,7 @@
     <BaseFilter @click="clickHandlerHTML" name="HTML" />
     <BaseFilter @click="clickHandlerCSS" name="CSS" />
     <BaseFilter @click="clickHandlerJS" name="JS" />
-    <BaseFilter @click="clickHandlerRating" name="Most Wanted" />
+    <BaseFilter @click="clickHandlerRating" name="Rating" />
 </template>
 
 
