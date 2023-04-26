@@ -42,8 +42,11 @@ export default {
         console.log("FETCHED DATA", this.cardList)
     },
     methods: {
-        clickHandlerEnglish() {
-            this.$router.push({ name: 'home', query: { language: 'english', technic: 'html' } })
+        async clickHandlerEnglish() {
+            const response = await fetch("https://coding-resources-rest-api.onrender.com/ressources/german");
+            const result = await response.json();
+            this.cardList = result.results;
+            console.log("FETCHED DATA", this.cardList)
         },
         async clickHandlerGerman() {
             const response = await fetch("https://coding-resources-rest-api.onrender.com/ressources/german");
