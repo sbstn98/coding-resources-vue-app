@@ -24,6 +24,8 @@
                 <RouterLink :to="{ name: 'user' }">
                     User
                 </RouterLink>
+                <a href="https://github.com/sbstn98/coding-resources-vue-app"><i class="fa-brands fa-github ml-2"></i> Code
+                </a>
             </div>
         </div>
     </nav>
