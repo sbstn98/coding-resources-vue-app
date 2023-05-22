@@ -10,6 +10,13 @@ The project is implemented in the front end with VUE.js and Tailwind CSS. The da
 
 For the project, I spent a lot of time looking into design systems and paid a lot of attention to programming the VUE components as independently as possible. The user interface was designed in Figma and is based on the concept of Atomic Design by Brad Frost, after which the VUE.js components are also implemented (https://bradfrost.com/ ).
 
+Here you can see my workflow:
+
+https://www.figma.com/file/gIjLcofLZ9BmVihHYOSAIo/FinalProject?type=whiteboard&node-id=0%3A1&t=Nd2Gpra1mA4tYFPY-1
+
+Figma Design: 
+
+
 
 The following functions are available:
 
