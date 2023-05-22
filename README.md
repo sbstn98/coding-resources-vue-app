@@ -30,3 +30,9 @@ Technic used:
 - Atomic Design
 
 Backend: https://github.com/sbstn98/coding-resources-rest-api
+
+Roadmap:
+
+- Implement a search function
+- Use query parameters to filter and search the resources
+- Improve the structure of the REST API 
