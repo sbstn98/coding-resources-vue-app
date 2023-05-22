@@ -13,12 +13,12 @@ For the project, I spent a lot of time looking into design systems and paid a lo
 
 The following functions are available:
 
-- Display the Resources
-- Add a new Resource
-- See a Detail view
-- Rate the Resource
-- Filter the Resources by Technic, Language, and Rating
-- It is Responsive for Mobile and Desktop
+- Display the resources
+- Add a new resource
+- See a detail view
+- Rate the resource
+- Filter the resources by technic, language, and rating
+- It is responsive for mobile and desktop
 
 Technic used:
 
